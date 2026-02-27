@@ -37,6 +37,6 @@ const std = @import("std");
 pub fn main() void {
     const msg = "Hello World\n";
     const handle = std.os.windows.GetStdHandle(std.os.windows.STD_OUTPUT_HANDLE) catch return;
-    _ = std.os.windows.WriteFile(handle, msg, null, null) catch return;
+    _ = std.os.windows.WriteFile(handle, msg, null) catch return;
 }
 ```
